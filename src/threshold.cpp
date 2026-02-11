@@ -1,4 +1,5 @@
 // Copyright (c) 2021 The Dash Core developers
+// Copyright (c) 2026 The GoByte Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -288,7 +289,7 @@ namespace bls {
     G2Element Threshold::SignatureRecover(const std::vector<G2Element>& sigs, const std::vector<Bytes>& ids) {
         return Poly::LagrangeInterpolate(sigs, ids);
     }
-    
+
     G2Element Threshold::Sign(const PrivateKey& privateKey, const Bytes& vecMessage) {
         return pThresholdScheme->Sign(privateKey, vecMessage);
     }
